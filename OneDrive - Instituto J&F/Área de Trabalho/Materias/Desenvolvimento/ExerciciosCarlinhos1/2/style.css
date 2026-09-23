@@ -1,0 +1,13 @@
+body{
+    text-align: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+p{
+    font-weight: bold;
+}
+
+* {
+    box-sizing: border-box;
+}
+

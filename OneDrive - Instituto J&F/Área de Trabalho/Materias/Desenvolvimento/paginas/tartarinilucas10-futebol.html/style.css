@@ -1,0 +1,298 @@
+:root{
+  --grama-escura: #14301F;
+  --grama: #1D4A2E;
+  --giz: #F3EEDF;
+  --couro: #8A5A32;
+  --dourado: #C79A3B;
+  --preto: #101512;
+  --linha: rgba(243,238,223,0.35);
+}
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; }
+
+body{
+  background:var(--grama-escura);
+  color:var(--giz);
+  font-family:'Oswald', sans-serif;
+  font-weight:400;
+  line-height:1.6;
+}
+
+h1, h2, h3, .numero{
+  font-family:'Anton', sans-serif;
+  font-weight:400;
+  letter-spacing:0.02em;
+  text-transform:uppercase;
+}
+
+p, .corpo{
+  font-family:'Source Serif 4', serif;
+}
+
+/* textura de campo listrado no fundo geral */
+body{
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      var(--grama-escura) 0px,
+      var(--grama-escura) 120px,
+      var(--grama) 120px,
+      var(--grama) 240px
+    );
+}
+
+a{ color:var(--dourado); }
+
+/* ===== HEADER / HERO ===== */
+
+header{
+  position:relative;
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:6vh 6vw;
+  overflow:hidden;
+  border-bottom:6px double var(--giz);
+}
+
+/* marcações de campo, como as linhas de uma área */
+header::before{
+  content:"";
+  position:absolute;
+  inset:4%;
+  border:2px solid var(--linha);
+  pointer-events:none;
+}
+header::after{
+  content:"";
+  position:absolute;
+  top:50%; left:50%;
+  width:220px; height:220px;
+  border:2px solid var(--linha);
+  border-radius:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+
+.selo{
+  font-size:0.75rem;
+  letter-spacing:0.35em;
+  color:var(--dourado);
+  margin-bottom:1.4rem;
+  z-index:1;
+}
+
+header h1{
+  font-size:clamp(2.8rem, 9vw, 7rem);
+  color:var(--giz);
+  line-height:0.95;
+  z-index:1;
+  text-shadow:4px 4px 0 var(--preto);
+}
+
+header h1 span{
+  display:block;
+  color:var(--dourado);
+  font-size:0.5em;
+  text-shadow:2px 2px 0 var(--preto);
+}
+
+.subtitulo{
+  max-width:540px;
+  margin-top:1.6rem;
+  font-size:1.05rem;
+  color:var(--giz);
+  opacity:0.85;
+  z-index:1;
+}
+
+.placar{
+  display:flex;
+  gap:2.5rem;
+  margin-top:3rem;
+  z-index:1;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.placar div{
+  text-align:center;
+  border-top:2px solid var(--dourado);
+  padding-top:0.5rem;
+  min-width:110px;
+}
+
+.placar .numero{
+  font-size:1.9rem;
+  color:var(--giz);
+}
+
+.placar small{
+  font-size:0.68rem;
+  letter-spacing:0.12em;
+  color:var(--giz);
+  opacity:0.7;
+  text-transform:uppercase;
+}
+
+/* ===== SEÇÕES GERAIS ===== */
+
+section{
+  padding:5.5rem 8vw;
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.rotulo{
+  font-size:0.75rem;
+  letter-spacing:0.3em;
+  color:var(--dourado);
+  text-transform:uppercase;
+  margin-bottom:0.8rem;
+}
+
+section h2{
+  font-size:clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom:1.6rem;
+  border-bottom:3px solid var(--dourado);
+  display:inline-block;
+  padding-bottom:0.3rem;
+}
+
+section > p{
+  max-width:640px;
+  font-size:1.08rem;
+  color:var(--giz);
+  opacity:0.92;
+}
+
+/* ===== LINHA DO TEMPO ("ingressos" de partida) ===== */
+
+#historia{ max-width:900px; }
+
+.timeline{
+  position:relative;
+  margin-top:3rem;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:26px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:repeating-linear-gradient(
+    to bottom,
+    var(--giz) 0 8px,
+    transparent 8px 16px
+  );
+  opacity:0.5;
+}
+
+.evento{
+  position:relative;
+  padding-left:70px;
+  margin-bottom:3rem;
+}
+
+.evento::before{
+  content:attr(data-ano);
+  position:absolute;
+  left:-4px;
+  top:0;
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:var(--preto);
+  border:2px solid var(--dourado);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Oswald';
+  font-size:0.62rem;
+  font-weight:600;
+  color:var(--dourado);
+  text-align:center;
+  line-height:1.1;
+}
+
+.evento h3{
+  font-size:1.35rem;
+  color:var(--giz);
+  margin-bottom:0.5rem;
+}
+
+.evento p{
+  max-width:600px;
+  color:var(--giz);
+  opacity:0.9;
+  font-size:1rem;
+}
+
+/* ===== CARTÕES "INGRESSO" — mitos e curiosidades ===== */
+
+.grade{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+  gap:1.4rem;
+  margin-top:2.5rem;
+}
+
+.ingresso{
+  background:var(--preto);
+  border:2px dashed var(--linha);
+  border-radius:10px;
+  padding:1.6rem;
+  position:relative;
+}
+
+.ingresso::before,
+.ingresso::after{
+  content:"";
+  position:absolute;
+  width:20px; height:20px;
+  background:var(--grama-escura);
+  border-radius:50%;
+  top:50%;
+  transform:translateY(-50%);
+}
+.ingresso::before{ left:-10px; }
+.ingresso::after{ right:-10px; }
+
+.ingresso h3{
+  font-size:1.1rem;
+  color:var(--dourado);
+  margin-bottom:0.6rem;
+}
+
+.ingresso p{
+  font-size:0.95rem;
+  color:var(--giz);
+  opacity:0.88;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width:640px){
+  section{ padding:3.5rem 6vw; }
+  .placar{ gap:1.4rem; }
+  .evento{ padding-left:58px; }
+  .evento::before{ width:46px; height:46px; font-size:0.55rem; }
+}
+
+/* respeita preferência de menos movimento */
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+}
+
+/* foco visível para acessibilidade */
+a:focus-visible{
+  outline:2px solid var(--dourado);
+  outline-offset:3px;
+}

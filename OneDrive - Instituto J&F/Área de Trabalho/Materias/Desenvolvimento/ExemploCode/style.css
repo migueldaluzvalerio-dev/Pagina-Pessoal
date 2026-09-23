@@ -1,0 +1,14 @@
+body{
+    display: flex;
+}
+p{
+    margin-right: 20px;
+    background-color: aqua;
+    border-width: 5px;
+    border-color: black;
+    
+}
+div{
+    border-width: 5px;
+    border-color: black;
+}

@@ -1,0 +1,109 @@
+
+body{
+    background-image: url(995de312-ce14-4a16-bf23-e0a85d17b9c6.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+}
+h1 {
+    color: rgba(230, 184, 77, 0.766);
+    animation: aparecer 1s ease-in;
+    font-size: 500%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;   
+}
+h2{
+    font-size: 300%;
+    color: rgb(142, 129, 112);
+    padding: auto;
+    background-color: rgba(0, 0, 0, 0.225);
+    border-radius: 1000px;
+}
+
+#instagram {
+    color: aliceblue;
+    background:linear-gradient(to left, rgb(13, 140, 218), rgb(112, 182, 239));
+    padding: 20px 35px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 170%;
+    transition: all 0.4s ease;
+    padding-top: 30px;
+}
+
+#instagram:hover {
+    font-size: 190%;
+}
+
+#telefone {
+    color: aliceblue;
+    background:linear-gradient(to right, rgb(13, 140, 218), rgb(112, 182, 239));
+    padding: 20px 35px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 170%;
+    transition: all 0.4s ease;
+    padding-top: 30px;
+}
+
+#telefone:hover {
+    font-size: 190%;
+}
+
+img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-left: 400px;
+    padding-right: 400px;
+    background-color: rgba(148, 189, 232, 0.608);
+    border-radius: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    opacity: 95%;
+    animation: aparecer linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+img:active{
+    background-color: rgba(117, 114, 169, 0.718);
+}
+
+p{
+    font-size: 200%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgba(178, 236, 255, 0.586);
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

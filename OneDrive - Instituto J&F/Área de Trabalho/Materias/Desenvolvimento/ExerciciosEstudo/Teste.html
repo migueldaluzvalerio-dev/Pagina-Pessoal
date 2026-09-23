@@ -1,0 +1,35 @@
+<script>
+    const videoElement = document.getElementById('webcam');
+    const statusMsg = document.getElementById('status-msg');
+
+    async function testCamera() {
+        // Verifica se o navegador suporta a API de mídia
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            statusMsg.innerText = "ERRO: Seu navegador não suporta acesso à câmera ou você não está em um ambiente seguro (HTTPS/Localhost).";
+            return;
+        }
+
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ 
+                video: { width: 640, height: 480 } 
+            });
+            videoElement.srcObject = stream;
+            statusMsg.innerText = "Câmera conectada! Inicializando IA...";
+            
+            // Aqui você chama a inicialização da IA (startApp)
+            startApp(); 
+        } catch (err) {
+            console.error("Erro detalhado:", err);
+            if (err.name === 'NotAllowedError') {
+                statusMsg.innerText = "ERRO: Você negou a permissão da câmera.";
+            } else if (err.name === 'NotFoundError') {
+                statusMsg.innerText = "ERRO: Nenhuma câmera encontrada no seu dispositivo.";
+            } else {
+                statusMsg.innerText = "ERRO: " + err.message;
+            }
+        }
+    }
+
+    // Chama a função de teste ao carregar a página
+    window.addEventListener('load', testCamera);
+</script>

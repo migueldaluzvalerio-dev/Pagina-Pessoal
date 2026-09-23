@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A História do Futebol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <p class="selo">Esporte mais popular do planeta</p>
+    <h1>O jogo<span>a história do futebol</span></h1>
+    <p class="subtitulo">De um couro chutado nas ruas da Inglaterra vitoriana ao espetáculo que hoje une bilhões de pessoas em torno de uma bola.</p>
+    <div class="placar">
+      <div><div class="numero">1863</div><small>Regras oficiais</small></div>
+      <div><div class="numero">211</div><small>Federações na FIFA</small></div>
+      <div><div class="numero">+5 bi</div><small>Torcedores no mundo</small></div>
+    </div>
+  </header>
+
+  <section id="origens">
+    <p class="rotulo">Antes das regras</p>
+    <h2>Onde tudo começou</h2>
+    <p>Muito antes de existir uma bola de verdade, povos como os chineses jogavam o <em>cuju</em>, um passatempo militar de mais de dois mil anos que consistia em chutar uma bola de couro recheada por uma abertura estreita. Gregos, romanos e povos mesoamericanos tinham suas próprias versões, cada uma com uma mistura própria de força, ritual e disputa territorial. Nenhuma delas, porém, tinha algo em comum com o esporte moderno: um conjunto único de regras compartilhado por todos.</p>
+  </section>
+
+  <section id="historia">
+    <p class="rotulo">Linha do tempo</p>
+    <h2>Como o jogo tomou forma</h2>
+
+    <div class="timeline">
+
+      <div class="evento" data-ano="1863">
+        <h3>A Football Association nasce</h3>
+        <p>Em Londres, clubes universitários britânicos se reúnem para unificar dezenas de variações locais do jogo. Nasce ali a distinção decisiva entre futebol e rúgbi: usar as mãos deixa de ser permitido.</p>
+      </div>
+
+      <div class="evento" data-ano="1872">
+        <h3>Primeira partida internacional</h3>
+        <p>Escócia e Inglaterra empatam em 0 a 0 em Glasgow, no primeiro confronto oficial entre seleções. O resultado modesto não impede que o jogo comece a atravessar fronteiras.</p>
+      </div>
+
+      <div class="evento" data-ano="1904">
+        <h3>Fundação da FIFA</h3>
+        <p>Sete países europeus criam a Federação Internacional de Futebol Associado, em Paris, para organizar competições entre nações e padronizar as regras globalmente.</p>
+      </div>
+
+      <div class="evento" data-ano="1930">
+        <h3>Primeira Copa do Mundo</h3>
+        <p>O Uruguai sedia e vence o primeiro Mundial, disputado por apenas treze seleções. O torneio planta a semente do maior evento esportivo do planeta.</p>
+      </div>
+
+      <div class="evento" data-ano="1950-70">
+        <h3>A era do Brasil</h3>
+        <p>Com Pelé e uma geração de craques, o Brasil conquista três das quatro primeiras Copas do período, moldando um estilo de jogo criativo que passa a ser referência mundial.</p>
+      </div>
+
+      <div class="evento" data-ano="1992">
+        <h3>Nasce a Premier League</h3>
+        <p>A reformulação do futebol inglês inaugura a era da televisão paga e dos grandes contratos comerciais, transformando clubes em marcas globais.</p>
+      </div>
+
+      <div class="evento" data-ano="2022">
+        <h3>Copa no Catar</h3>
+        <p>Pela primeira vez disputada no fim do ano e no Oriente Médio, a Copa do Mundo confirma o alcance verdadeiramente global do esporte.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="curiosidades">
+    <p class="rotulo">Bastidores</p>
+    <h2>Curiosidades da bola</h2>
+    <div class="grade">
+
+      <div class="ingresso">
+        <h3>O primeiro cartão</h3>
+        <p>Os cartões amarelo e vermelho só foram introduzidos na Copa de 1970, no México, depois de mal-entendidos por causa da barreira do idioma entre árbitros e jogadores.</p>
+      </div>
+
+      <div class="ingresso">
+        <h3>Bola sem costura</h3>
+        <p>Até os anos 1980, as bolas eram de couro costurado e absorviam água, ficando pesadas na chuva. Os modelos sintéticos atuais só surgem para resolver esse problema.</p>
+      </div>
+
+      <div class="ingresso">
+        <h3>Um nome, dois esportes</h3>
+        <p>Nos Estados Unidos, "football" é o esporte com as mãos. O futebol que o mundo conhece é chamado ali de <em>soccer</em>, termo que na verdade nasceu na própria Inglaterra do século 19.</p>
+      </div>
+
+      <div class="ingresso">
+        <h3>A torcida também joga</h3>
+        <p>Cânticos, bandeiras e coreografias de arquibancada se tornaram parte tão essencial da experiência que hoje são estudados como fenômeno cultural, não apenas esportivo.</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
