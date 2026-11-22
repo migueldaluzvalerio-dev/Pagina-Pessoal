@@ -508,3 +508,75 @@ a {
     }
 }
 
+/* =====================================================
+   RESPONSIVIDADE
+   ===================================================== */
+@media (max-width: 800px) {
+    .topo {
+        padding: 12px 20px;
+    }
+
+    main {
+        padding: 16px 14px;
+    }
+
+    main section:not(.hero) {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+    .topo {
+        position: static;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 10px 16px;
+    }
+
+    .hero {
+        padding: 44px 16px;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .curiosidades {
+        text-align: left;
+    }
+
+    .grade,
+    .fotos,
+    .filmes {
+        grid-template-columns: 1fr;
+    }
+
+    .favoritos .cartao {
+        max-width: none;
+    }
+
+    .cartao img {
+        height: 200px;
+    }
+
+    .foto img {
+        height: 320px;
+    }
+
+    .filme img {
+        height: 300px;
+    }
+
+    section {
+        scroll-margin-top: 10px;
+    }
+}
