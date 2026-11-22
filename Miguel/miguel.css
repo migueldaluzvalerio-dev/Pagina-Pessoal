@@ -1,0 +1,67 @@
+/* =====================================================
+   PALETA: verde + cinza
+   ===================================================== */
+:root {
+    --verde: #1f8a4c;
+    --verde-escuro: #14532d;
+    --verde-claro: #d7efe0;
+    --cinza-fundo: #d5d9dd;
+    --cinza-painel: #f1f3f5;
+    --cinza-borda: #d0d5da;
+    --cinza-escuro: #2b3138;
+    --cinza-texto: #2f363d;
+}
+
+/* =====================================================
+   BASE
+   ===================================================== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--cinza-texto);
+    background-color: var(--cinza-fundo);
+    margin: 0;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =====================================================
+   ANIMAÇÕES (keyframes)
+   ===================================================== */
+@keyframes surgir {
+    from { opacity: 0; translate: 0 30px; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+@keyframes descer {
+    from { opacity: 0; translate: 0 -100%; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+@keyframes gradiente {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes flutuar {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 30px -25px; }
+}
+
+@keyframes brilho {
+    from { background-position: -200% 0; }
+    to   { background-position: 200% 0; }
+}
+
