@@ -465,3 +465,23 @@ section:hover > h2::after {
     padding-bottom: 24px;
 }
 
+/* =====================================================
+   LINKS E RODAPÉ
+   ===================================================== */
+a {
+    color: var(--verde-escuro);
+}
+
+.rodape {
+    margin-top: 20px;
+    padding: 22px 15px;
+    text-align: center;
+    color: #d1d5db;
+    background: var(--cinza-escuro);
+    border-top: 4px solid var(--verde);
+}
+
+.rodape p {
+    margin: 0;
+}
+
