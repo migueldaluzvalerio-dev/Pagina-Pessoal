@@ -1,0 +1,107 @@
+:root {
+    --verde-escuro: #003d22;
+    --verde: #006437;
+    --verde-claro: #2e9e62;
+    --verde-fundo: #e8f5ec;
+    --branco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--verde-fundo);
+    color: var(--verde-escuro);
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--verde);
+    border-bottom: 6px solid var(--verde-escuro);
+    padding: 30px 20px;
+}
+
+h1 {
+    margin: 0;
+    color: var(--branco);
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+}
+
+.escudo {
+    height: 60px;
+    width: auto;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    filter: brightness(0) invert(1); 
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: var(--branco);
+    border: 2px solid var(--verde);
+    border-radius: 12px;
+}
+
+h2 {
+    width: fit-content;
+    margin: 40px auto 15px;
+    padding-bottom: 8px;
+    color: var(--verde);
+    border-bottom: 3px solid var(--verde-claro);
+    font-size: 2.2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid var(--verde);
+    margin: 10px 5px;
+}
+
+img[alt="Logo do Spotify"] {
+    border: none;
+    border-radius: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+a {
+    color: var(--verde);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--verde-claro);
+}
+
+a:hover {
+    color: var(--branco);
+    background-color: var(--verde);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    img {
+        width: 60%;
+    }
+}
