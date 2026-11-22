@@ -127,3 +127,137 @@ img {
     width: 100%;
 }
 
+/* =====================================================
+   CONTEÚDO
+   ===================================================== */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/* cada seção vira um painel cinza claro */
+main section:not(.hero) {
+    background-color: var(--cinza-painel);
+    border: 1px solid var(--cinza-borda);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+main section p {
+    margin-top: 0;
+}
+
+/* títulos com barra verde que cresce no hover do painel */
+h2 {
+    position: relative;
+    margin: 0 0 22px;
+    padding-bottom: 12px;
+    color: var(--verde-escuro);
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--verde), #4ade80);
+    transition: width 0.5s ease;
+}
+
+section:hover > h2::after {
+    width: 140px;
+}
+
+.subtitulo {
+    margin-top: 36px;
+}
+
+/* =====================================================
+   HERO (apresentação)
+   ===================================================== */
+.hero {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 64px 20px;
+    margin-bottom: 28px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #2b3138, var(--verde-escuro), var(--verde), #2b3138);
+    background-size: 300% 300%;
+    animation: gradiente 14s ease infinite;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* bolas decorativas que flutuam */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    animation: flutuar 9s ease-in-out infinite;
+}
+
+.hero::before {
+    width: 220px;
+    height: 220px;
+    top: -70px;
+    left: -50px;
+}
+
+.hero::after {
+    width: 300px;
+    height: 300px;
+    right: -80px;
+    bottom: -120px;
+    animation-delay: -4s;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    animation: surgir 0.9s ease-out both;
+}
+
+.hero > :nth-child(1) { animation-delay: 0.15s; }
+.hero > :nth-child(2) { animation-delay: 0.35s; }
+.hero > :nth-child(3) { animation-delay: 0.55s; }
+
+.hero h2 {
+    padding: 0;
+    color: white;
+    font-size: 2.6rem;
+}
+
+.hero h2::after {
+    display: none;
+}
+
+.hero p {
+    max-width: 560px;
+    color: #e5e7eb;
+}
+
+.etiqueta {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    color: #86efac;
+}
+
