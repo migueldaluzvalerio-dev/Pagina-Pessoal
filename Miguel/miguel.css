@@ -65,3 +65,65 @@ img {
     to   { background-position: 200% 0; }
 }
 
+/* =====================================================
+   CABEÇALHO (position: sticky + flexbox)
+   ===================================================== */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 30px;
+    color: white;
+    background: var(--cinza-escuro);
+    border-bottom: 4px solid var(--verde);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    animation: descer 0.7s ease-out both;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    position: relative;
+    padding-bottom: 4px;
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ade80;
+    transition: width 0.3s ease;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
