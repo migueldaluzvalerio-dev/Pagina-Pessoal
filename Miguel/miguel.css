@@ -485,3 +485,26 @@ a {
     margin: 0;
 }
 
+/* =====================================================
+   ANIMAÇÃO AO ROLAR (navegadores novos)
+   ===================================================== */
+@supports (animation-timeline: view()) {
+    main section:not(.hero),
+    .cartao,
+    .foto {
+        animation: surgir linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
+    }
+}
+
+/* quem prefere menos movimento não vê animações */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
