@@ -302,3 +302,122 @@ section:hover > h2::after {
     color: var(--verde-escuro);
 }
 
+/* =====================================================
+   GRID + CARTÕES
+   ===================================================== */
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.cartao {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    padding: 12px;
+    background-color: white;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 14px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-8px);
+    border-color: var(--verde);
+    box-shadow: 0 14px 26px rgba(20, 83, 45, 0.25);
+}
+
+.cartao img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.cartao:hover img {
+    transform: scale(1.05);
+}
+
+.corpo h3 {
+    margin: 0 0 6px;
+    color: var(--verde-escuro);
+}
+
+.corpo p {
+    margin: 0;
+}
+
+.foto-familia {
+    grid-column: 1 / -1;
+}
+
+.foto-familia img {
+    height: auto;
+    max-height: 500px;
+}
+
+/* links dos cartões viram botõezinhos (flexbox) */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.cartao .links a {
+    display: block;
+    padding: 8px 12px;
+    color: var(--verde-escuro);
+    background-color: var(--verde-claro);
+    border-radius: 8px;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.cartao .links a:hover {
+    color: white;
+    background-color: var(--verde);
+    transform: translateX(6px);
+}
+
+/* favoritos em flexbox, última linha centralizada */
+.favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+}
+
+.favoritos .cartao {
+    flex: 1 1 250px;
+    max-width: 320px;
+}
+
+/* faixa "Meu time é o Palmeiras" com brilho passando */
+#destaque {
+    margin: 0 0 24px;
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    background: linear-gradient(110deg, var(--verde-escuro) 30%, #4ade80 50%, var(--verde-escuro) 70%);
+    background-size: 200% 100%;
+    animation: brilho 5s linear infinite;
+}
+
+/* filmes: pôster inteiro */
+.filmes {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.filme img {
+    height: 330px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
