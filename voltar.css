@@ -3,7 +3,7 @@
 .voltar {
     display: block;
     width: fit-content;
-    margin: 12px auto 12px 12px;
+    margin: 20px auto;
     padding: 6px 14px;
     color: #000;
     background-color: #fff;
@@ -21,7 +21,7 @@
 .voltar:focus-visible {
     color: #fff;
     background-color: #000;
-    translate: -3px 0;
+    translate: 0 -2px;
 }
 
 @media (prefers-reduced-motion: reduce) {
