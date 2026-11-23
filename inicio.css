@@ -48,7 +48,8 @@ body {
 }
 
 .pessoa {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     text-align: center;
     text-decoration: none;
     color: inherit;
@@ -100,4 +101,19 @@ body {
 
 .rodape p {
     margin: 0;
+}
+
+@media (max-width: 400px) {
+    .escolha {
+        padding: 24px 12px;
+    }
+
+    .topo h1 {
+        font-size: 1.6rem;
+    }
+
+    .pessoa img {
+        width: 150px;
+        height: 150px;
+    }
 }
