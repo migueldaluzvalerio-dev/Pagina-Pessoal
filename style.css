@@ -217,11 +217,54 @@ a {
     }
 }
 
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main,
+li,
+p {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 800px) {
+    main {
+        margin: 20px 12px;
+    }
+}
+
 @media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 20px 12px;
+    }
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .escudo {
+        height: 44px;
+    }
+    main {
+        padding: 16px 12px;
     }
     img {
         width: 60%;
+    }
+    .fotos img {
+        width: 45%;
+    }
+    img.escudo {
+        width: auto;
+    }
+    img[alt="Logo do Spotify"] {
+        width: 30%;
     }
 }
