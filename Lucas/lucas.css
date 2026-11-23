@@ -444,3 +444,142 @@ footer a:hover {
         scroll-behavior: auto;
     }
 }
+
+/* Animações */
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        translate: 0 28px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes descer {
+    from {
+        opacity: 0;
+        translate: 0 -40px;
+    }
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes aparecer-foto {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes pulsar-ponto {
+    0%, 100% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.5;
+    }
+}
+
+.cabecalho {
+    animation: descer 0.7s ease-out both;
+}
+
+.nome-menu span {
+    display: inline-block;
+    animation: pulsar-ponto 2s ease-in-out infinite;
+}
+
+.texto-apresentacao > * {
+    animation: surgir 0.7s ease-out both;
+}
+
+.texto-apresentacao > :nth-child(1) { animation-delay: 0.2s; }
+.texto-apresentacao > :nth-child(2) { animation-delay: 0.3s; }
+.texto-apresentacao > :nth-child(3) { animation-delay: 0.4s; }
+.texto-apresentacao > :nth-child(4) { animation-delay: 0.5s; }
+.texto-apresentacao > :nth-child(5) { animation-delay: 0.6s; }
+
+.foto-principal {
+    animation: aparecer-foto 0.9s ease-out 0.3s both;
+}
+
+.curiosidades,
+.cartao,
+.galeria-pessoal figure,
+.titulo-secao,
+.introducao {
+    animation: surgir 0.7s ease-out 0.5s both;
+}
+
+/* Quem rola a página vê os blocos aparecendo conforme chegam na tela */
+@supports (animation-timeline: view()) {
+    .curiosidades,
+    .cartao,
+    .galeria-pessoal figure,
+    .titulo-secao,
+    .introducao {
+        animation: surgir linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 35%;
+    }
+}
+
+.cartao,
+.galeria-pessoal figure,
+.foto-principal {
+    transition: translate 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartao:hover,
+.galeria-pessoal figure:hover,
+.foto-principal:hover {
+    translate: 0 -6px;
+    box-shadow: 0 14px 28px #152c5026;
+}
+
+.cartao > img,
+.galeria-pessoal img,
+.foto-principal img {
+    transition: scale 0.4s ease;
+}
+
+.cartao:hover > img,
+.galeria-pessoal figure:hover img,
+.foto-principal:hover img {
+    scale: 1.05;
+}
+
+.botao {
+    transition: background-color 0.25s ease, translate 0.25s ease, box-shadow 0.25s ease;
+}
+
+.botao:hover {
+    translate: 0 -3px;
+    box-shadow: 0 8px 16px #2058b640;
+}
+
+.links-menu a {
+    transition: color 0.25s ease;
+}
+
+footer .voltar-rodape {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
